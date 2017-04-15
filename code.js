@@ -13,8 +13,7 @@ function collectQuery() {
 
 function sendData(searchQuery) {
 
-  let httpReq = "http://www.omdbapi.com/?t="
-  let httpTvReq = "https://api.themoviedb.org/3/search/tv?api_key="
+  let httpReq = "https://www.omdbapi.com/?t="
   let query = searchQuery;
 
   axios.get(httpReq + query)
