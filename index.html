@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Movie Search</title>
+    <meta name="description" content="How good is this movie">
+    <meta name="author" content="Yamen Sharaf">
+    <title>How good is this movie?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.min.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="jumbotron">
-    <div class="container">
-      <div id="main-header" class="text-center">
-        <h1>How good is this movie?</h1>
-      </div>
-      <div class="row search">
-        <div class="col-md-2">
+        <div class="container">
+            <div id="main-header" class="text-center">
+                <h1>How good is this movie?</h1>
+            </div>
+            <div class="row search">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                    <form class="form-group" id="search" onsubmit="collectQuery()">
+                        <input class="form-control" type="search" id="searchField" placeholder="Search for movies (try searching multiple movies)">
+                        <button class="btn btn-success btn-block" type="submit" id="submitButton">Search</button>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="row" id="output">
+
+            </div>
 
         </div>
-        <div class="col-md-8">
-          <form class="form-group" id="search" onsubmit="collectQuery()">
-            <input class="form-control" type="search" id="searchField" placeholder="Search for movies (try searching multiple movies)">
-            <button class="btn btn-success btn-block" type="submit" id="submitButton">Search</button>
-          </form>
-
+    </div>
+    <footer class="footer">
+        <div class="container text-center">
+            <span class="text-muted">Made with love by <span id="yamen"><a href = "http://yamensharaf.tk">Yamen Sharaf</a></span></span>
         </div>
-
-      </div>
-  <div class="row" id="output">
-
-  </div>
-
-</div>
-</div>
-<footer class="footer">
-      <div class="container text-center">
-        <span class="text-muted">Made with love by <span id="yamen"><a href = "http://yamensharaf.tk">Yamen Sharaf</a></span></span>
-      </div>
-  </footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
@@ -47,5 +49,6 @@
     <script src="code.js" charset="utf-8"></script>
     <script src="translator.js" charset="utf-8"></script>
 
-  </body>
+</body>
+
 </html>
