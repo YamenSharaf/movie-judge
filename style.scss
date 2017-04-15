@@ -6,6 +6,12 @@
 }
 body {
   background-color: #E3F2FD;
+  #main-header {
+    margin-bottom: 50px;
+    h1 {
+      color: #0D47A1;
+    }
+  }
   .jumbotron {
     background-color: #E3F2FD;
   }
@@ -14,5 +20,15 @@ body {
 .search {
   button {
     margin: 20px 0px 20px 0px;
+  }
+}
+
+.footer {
+  .div {
+    .span{
+      .span{
+        color: red;
+      }
+    }
   }
 }

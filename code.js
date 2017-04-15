@@ -15,7 +15,6 @@ function sendData(searchQuery) {
 
   let httpReq = "http://www.omdbapi.com/?t="
   let httpTvReq = "https://api.themoviedb.org/3/search/tv?api_key="
-  let key = "9871a8c0f6e8825256f1b030bb45c7da"
   let query = searchQuery;
 
   axios.get(httpReq + query)
