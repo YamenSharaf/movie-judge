@@ -9,13 +9,19 @@ $mc: #34495e;
 $title-font: 'Montserrat', sans-serif;
 $number-font: 'Rajdhani', sans-serif;
 $material-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-/////////////////////////////////////////////////////////////////////
+$test-border: 3px blue dashed;
+$break-point: 700px;
+ /////////////////////////////////////////////////////////////////////
 
 body {
   background-color: $my-black;
   padding: 2em;
+  @media screen and (max-width: $break-point) {
+    padding: 0em;
+  }
 
   .container {
+
     border-radius: 5px;
     flex-direction: column;
     display: flex;
@@ -23,7 +29,7 @@ body {
     background-color: $my-white;
 
     .header {
-      border-radius: 5px 5px 0px 0px;
+      border-radius: 5px 5px 0 0;
       display: flex;
       justify-content: center;
       align-content: center;
@@ -77,10 +83,15 @@ body {
     .main-content {
       min-height: 70vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       margin-top: 1em;
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+      }
 
       #output {
+        max-width: 50vw;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -88,13 +99,16 @@ body {
         align-items: center;
         text-align: center;
         font-family: $title-font;
+        @media screen and (max-width: 700px) {
+          max-width: 100%;
+        }
+
         img {
           box-shadow: $material-shadow;
         }
 
         h1 {
           text-transform: uppercase;
-
         }
 
         hr {
@@ -114,9 +128,9 @@ body {
           text-transform: uppercase;
           letter-spacing: 2px;
           min-height: 5vh;
-          margin: 10px 0;
+          margin: 3em 0 0 0;
           box-shadow: $material-shadow;
-          padding: 5px;
+          padding: 1em 4em;
         }
       }
 
@@ -129,20 +143,26 @@ body {
 
         .imdb {
           color: $imdb;
+          border: 3px dashed $imdb;
+          padding: 1em 0;
         }
 
         .rt {
           color: $rt;
+          border: 3px dashed $rt;
+          padding: 1em 0;
         }
 
         .mc {
           color: $mc;
+          border: 3px dashed $mc;
+          padding: 1em 0;
         }
 
         .verdict {
           font-weight: bold;
           font-size: 2em;
-          letter-spacing: 1em;
+          letter-spacing: .5em;
         }
 
         .spectacular {
@@ -168,6 +188,7 @@ body {
         }
 
         h3 {
+          color: $my-purple;
           text-align: center !important;
           font-size: 2em;
           font-family: $number-font;
