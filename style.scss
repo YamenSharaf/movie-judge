@@ -95,8 +95,8 @@ body {
       }
 
       #output {
-        max-width: 50vw;
-        min-width: 50vw;
+        max-width: 50%;
+        min-width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -125,7 +125,6 @@ body {
         }
 
         button {
-          border: 1px solid $my-white;
           background-color: $my-black;
           color: $my-white;
           flex-grow: 1;
@@ -195,7 +194,7 @@ body {
 
           &:nth-child(4) {
             color: $my-purple;
-            border: 4px dashed $my-purple;
+            border: 4px solid $my-purple;
           }
 
           .site {

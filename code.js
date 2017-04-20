@@ -16,6 +16,7 @@ function sendData(searchQuery) {
   let query = searchQuery;
 
   axios.get(httpReq + query).then(function(response) {
+    console.log(response);
     let title = response.data.Title;
     let year = response.data.Year;
     let description = response.data.Plot;
@@ -74,5 +75,5 @@ function determineQuality(rating) {
 function renderMovie(title, year, description, poster, link, rating, quality) {
 
   let outputArea = document.getElementById('output');
-  outputArea.innerHTML = '<img src="' + poster + '">' + '<h1>' + title + ' ' + '(' + year + ')' + '</h1>' + '<hr>' + '<p>' + description + '</p>' + '<a target="_blank" href="http://www.imdb.com/title/' + link + '"><button>More info</button></a>';
+  outputArea.innerHTML = '<img src="' + poster + '">' + '<h1>' + title + ' ' + '[' + year + ']' + '</h1>' + '<hr>' + '<p>' + description + '</p>' + '<a target="_blank" href="http://www.imdb.com/title/' + link + '"><button>More info</button></a>';
 }
