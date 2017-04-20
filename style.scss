@@ -11,22 +11,24 @@ $number-font: 'Rajdhani', sans-serif;
 $material-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 $test-border: 3px blue dashed;
 $break-point: 700px;
- /////////////////////////////////////////////////////////////////////
-
+/////////////////////////////////////////////////////////////////////
 body {
   background-color: $my-black;
   padding: 2em;
   @media screen and (max-width: $break-point) {
-    padding: 0em;
+    padding: 0;
   }
 
   .container {
-
     border-radius: 5px;
     flex-direction: column;
     display: flex;
     min-height: calc(100vh + 100%);
     background-color: $my-white;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: soft-light;
 
     .header {
       border-radius: 5px 5px 0 0;
@@ -86,13 +88,15 @@ body {
       flex-direction: row;
       justify-content: space-between;
       margin-top: 1em;
+
+
       @media screen and (max-width: 700px) {
         flex-direction: column;
+
       }
 
       #output {
         max-width: 50vw;
-        flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -128,70 +132,110 @@ body {
           text-transform: uppercase;
           letter-spacing: 2px;
           min-height: 5vh;
-          margin: 3em 0 0 0;
+          margin: 3em 0 0;
           box-shadow: $material-shadow;
           padding: 1em 4em;
         }
       }
 
       .movie-verdict {
-        flex-grow: 1;
-        flex-direction: column;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        min-width: 50%;
+        text-align: center;
 
-        .imdb {
-          color: $imdb;
-          border: 3px dashed $imdb;
-          padding: 1em 0;
-        }
-
-        .rt {
-          color: $rt;
-          border: 3px dashed $rt;
-          padding: 1em 0;
-        }
-
-        .mc {
-          color: $mc;
-          border: 3px dashed $mc;
-          padding: 1em 0;
-        }
-
-        .verdict {
-          font-weight: bold;
-          font-size: 2em;
-          letter-spacing: .5em;
-        }
-
-        .spectacular {
-          color: #f1c40f;
-        }
-
-        .great {
-          color: #27ae60;
-        }
-
-        .okay {
-          color: #2980b9;
-        }
-
-        .bad,
-        .error {
-          color: #e74c3c;
-        }
-
-        h1 {
-          text-align: center !important;
+        #verdict {
+          h1{
           font-family: $title-font;
+          letter-spacing: 5px;
+          }
+          font-family: $number-font;
+          font-size: 20px;
+          letter-spacing: 2px;
+          .spectacular {
+            color: #f1c40f;
+          }
+
+          .great {
+            color: #27ae60;
+          }
+
+          .okay {
+            color: #2980b9;
+          }
+
+          .bad,
+          .error {
+            color: #e74c3c;
+          }
         }
 
-        h3 {
-          color: $my-purple;
-          text-align: center !important;
-          font-size: 2em;
-          font-family: $number-font;
+        div {
+          padding: 0 !important;
+          margin: 1em 0;
+          width: 300px;
+
+          &:nth-child(1) {
+            color: $imdb;
+            border: 2px dashed $imdb;
+          }
+
+          &:nth-child(2) {
+            color: $rt;
+            border: 2px dashed $rt;
+          }
+
+          &:nth-child(3) {
+            color: $mc;
+            border: 2px dashed $mc;
+          }
+
+          &:nth-child(4) {
+            color: $my-purple;
+            border: 4px dashed $my-purple;
+          }
+
+          .site {
+            font-size: 25px;
+            font-family: $title-font;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            padding: 0 20px;
+          }
+
+          .score {
+            font-family: $number-font;
+            font-size: 30px;
+            font-weight: bold;
+            color: $my-black;
+          }
+        }
+      }
+    }
+
+    .footer {
+      height: 3em;
+      background-color: $my-purple;
+      border-radius: 5px 5px 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      p{
+        color: $my-white;
+        font-size: 15px;
+        font-family: $title-font;
+        i {
+          color: $imdb;
+        }
+        a{
+          color: $my-white;
+          text-decoration: none;
+          letter-spacing: 1px;
+          &:hover {
+            color: $my-black;
+            text-decoration: underline;
+          }
         }
       }
     }

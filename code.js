@@ -6,7 +6,7 @@ var key = "https://api.themoviedb.org/3/movie/550?api_key="
 
 
 function collectQuery() {
-  var field = document.getElementById('searchField').value
+  var field = document.getElementById('searchField').value;
   sendData(field);
   document.getElementById('search').reset();
 }
@@ -39,15 +39,25 @@ function sendData(searchQuery) {
 function renderVerdict(imdb, rt, mc, total) {
   let quality = determineQuality(total);
   let verdictOutput = document.getElementById('verdict')
-  verdictOutput.innerHTML = '<h1 class="imdb">IMDb Rating</h1>' +
-    '<h3>' + imdb + '</h3>' +
-    '<h1 class="rt">Rotten Tomatoes Meter</h1>' +
-    '<h3>' + rt + '</h3>' +
-    '<h1 class="mc">Metacritic Score</h1>' +
-    '<h3>' + mc + '</h3>' +
-    '<hr>' +
-    '<h1 class = "verdict">VERDICT</h1>' +
-    quality;
+  verdictOutput.innerHTML =
+  `
+    <div class = "imdb">
+    <p class="site">IMDb Rating</p>
+    <p class="score">${imdb}</p>
+    </div>
+    <div class = "rt">
+    <p class="site">Rotten Tomatoes</p>
+    <p class="score">${rt}</p>
+    </div>
+    <div class = "mc">
+    <p class="site">Metacritic Score</p>
+    <p class="score">${mc}</p>
+    </div>
+    <div id = "verdict">
+    <h1>VERDICT</h1>
+    <h3>${quality}</h3>
+    </div>
+    `
 
 }
 
