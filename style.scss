@@ -74,12 +74,14 @@ body {
         }
 
         button {
-          border: 1px solid $my-white;
+          //border: 0.4px solid $my-white;
+          border: none;
           background-color: $my-black;
           color: $my-white;
           flex-grow: 1;
           text-transform: uppercase;
           letter-spacing: 2px;
+          text-align: center;
         }
       }
     }
@@ -135,6 +137,8 @@ body {
         }
 
         button {
+          border: none;
+          text-align: center;
           background-color: $my-black;
           color: $my-white;
           flex-grow: 1;
