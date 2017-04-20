@@ -10,8 +10,8 @@ $title-font: 'Montserrat', sans-serif;
 $number-font: 'Rajdhani', sans-serif;
 $material-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 $test-border: 3px blue dashed;
-$break-point: 700px;
-/////////////////////////////////////////////////////////////////////
+$break-point: 700px; /////////////////////////////////////////////////////////////////////
+
 body {
   background-color: darken($my-purple, 20%);
   padding: 2em;
@@ -40,7 +40,7 @@ body {
       background-color: $my-purple;
       box-shadow: $material-shadow;
       background-image: url('pattern.png');
-      background-blend-mode:soft-light;
+      background-blend-mode: soft-light;
 
       h1 {
         text-transform: uppercase;
@@ -80,7 +80,6 @@ body {
           flex-grow: 1;
           text-transform: uppercase;
           letter-spacing: 2px;
-
         }
       }
     }
@@ -91,10 +90,8 @@ body {
       flex-direction: row;
       justify-content: space-between;
       margin-top: 1em;
-
       @media screen and (max-width: 700px) {
         flex-direction: column;
-
       }
 
       #output {
@@ -106,7 +103,6 @@ body {
         align-items: center;
         text-align: center;
         font-family: $title-font;
-
         @media screen and (max-width: 700px) {
           max-width: 100%;
         }
@@ -151,13 +147,14 @@ body {
         text-align: center;
 
         #verdict {
-          h1{
-          font-family: $title-font;
-          letter-spacing: 5px;
+          h1 {
+            font-family: $title-font;
+            letter-spacing: 5px;
           }
           font-family: $number-font;
           font-size: 20px;
           letter-spacing: 2px;
+
           .spectacular {
             color: #f1c40f;
           }
@@ -226,17 +223,21 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      p{
+
+      p {
         color: $my-white;
         font-size: 15px;
         font-family: $title-font;
+
         i {
           color: $imdb;
         }
-        a{
+
+        a {
           color: $my-white;
           text-decoration: none;
           letter-spacing: 1px;
+
           &:hover {
             color: $my-black;
             text-decoration: underline;
