@@ -13,7 +13,7 @@ $test-border: 3px blue dashed;
 $break-point: 700px;
 /////////////////////////////////////////////////////////////////////
 body {
-  background-color: $my-black;
+  background-color: darken($my-purple, 20%);
   padding: 2em;
   @media screen and (max-width: $break-point) {
     padding: 0;
@@ -39,6 +39,8 @@ body {
       min-width: 100%;
       background-color: $my-purple;
       box-shadow: $material-shadow;
+      background-image: url('pattern.png');
+      background-blend-mode:soft-light;
 
       h1 {
         text-transform: uppercase;
@@ -89,7 +91,6 @@ body {
       justify-content: space-between;
       margin-top: 1em;
 
-
       @media screen and (max-width: 700px) {
         flex-direction: column;
 
@@ -97,12 +98,14 @@ body {
 
       #output {
         max-width: 50vw;
+        min-width: 50vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         font-family: $title-font;
+
         @media screen and (max-width: 700px) {
           max-width: 100%;
         }
