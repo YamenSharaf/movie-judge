@@ -55,6 +55,7 @@ body {
       min-width: 70%;
       min-height: 10vh;
       align-self: center;
+      margin: auto;
       background-color: $my-purple;
       box-shadow: $material-shadow;
       border-radius: 0 0 5px 5px;
@@ -74,7 +75,6 @@ body {
         }
 
         button {
-          //border: 0.4px solid $my-white;
           border: none;
           background-color: $my-black;
           color: $my-white;
@@ -231,6 +231,7 @@ body {
     }
 
     .footer {
+      box-shadow: $material-shadow;
       height: 3em;
       background-color: $my-purple;
       border-radius: 5px 5px 0 0;
